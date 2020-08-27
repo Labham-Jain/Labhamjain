@@ -5,12 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labham Jain - Front End Developer</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./app.js" defer></script>
+
+
+    <!-- Libraries -->
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
 </head>
 
 <body>
 
+    <!-- Mobile Navigation Bar -->
+    <ul class="nav_menu_mobile" id="nav_menu_mobile">
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
 
 
+    <nav class="navbar" id="navbar">
+        <a href="/" class="logo section_color">
+            Labham
+        </a>
+        <button class="menuToggle section_color" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav_menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section class="first_section" id="sectionChangeColor" data-main="#427d8a">
+
+        <div class="profile_image">
+            <img src="#" alt="">
+        </div>
+
+        <div class="wrapper">
+            <p>Hello,</p>
+            <p>I'm
+            <h2>Labham Jain</h2>
+            </p>
+            <p>A
+            <h2>Front End Developer</h2>
+            </p>
+
+            <button id="cta_nav">What Makes Me Perfect For You ?</button>
+        </div>
+
+    </section>
 
 </body>
 

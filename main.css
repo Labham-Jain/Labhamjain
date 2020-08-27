@@ -1,5 +1,99 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Roboto&display=swap");
+
+/* Default & globals */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+li {
+	list-style-type: none;
+}
+
+.section_color {
+	--primary: #427d8a;
+	--primary-shadow: #427d8a08;
+	background: var(--primary);
+}
+
+/* Navigation Bar */
+
+.navbar {
+	display: flex;
+	width: 100%;
+	height: 3rem;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 10%;
+}
+.navbar .nav_menu {
+	display: none;
+	font-size: 18px;
+	font-family: "Reem Kufi", sans-serif;
+}
+
+.navbar .nav_menu li {
+	margin: 0px 10px;
+}
+
+.navbar .logo {
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px var(--primary-shadow), 0px 0px 10px #00000010;
+}
+
+.navbar .menuToggle {
+	color: white;
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Mobile Navigation Bar */
+
+.nav_menu_mobile {
+	display: none;
+	position: absolute;
+	top: 3rem;
+	font-family: "Reem Kufi", sans-serif;
+	width: 100%;
+	text-align: center;
+	height: calc(100vh - 3rem);
+	background: #ffffff;
+}
+.nav_menu_mobile.show {
+	display: block;
+}
+.nav_menu_mobile li a {
+	font-size: 22px;
+	margin: 10px 0px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 552px) {
+	.navbar .nav_menu {
+		display: block;
+		display: flex;
+	}
+	.nav_menu_mobile {
+		display: none;
+	}
+	.navbar .menuToggle {
+		display: none;
+	}
 }
