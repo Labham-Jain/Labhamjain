@@ -16,11 +16,14 @@ a {
 li {
 	list-style-type: none;
 }
-
-.section_color {
-	--primary: #427d8a;
-	--primary-shadow: #427d8a08;
-	background: var(--primary);
+html {
+	scroll-behavior: smooth;
+}
+body {
+	padding-bottom: 3.5rem;
+}
+::-webkit-scrollbar {
+	width: 0px;
 }
 
 /* Navigation Bar */
@@ -28,10 +31,15 @@ li {
 .navbar {
 	display: flex;
 	width: 100%;
+	position: fixed;
+	background: #ffffff;
 	height: 3rem;
 	align-items: center;
 	justify-content: space-between;
 	padding: 8px 10%;
+}
+.navbar.scrolled {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .navbar .nav_menu {
 	display: none;
@@ -67,7 +75,7 @@ li {
 
 .nav_menu_mobile {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 3rem;
 	font-family: "Reem Kufi", sans-serif;
 	width: 100%;
@@ -83,9 +91,139 @@ li {
 	margin: 10px 0px;
 }
 
+/* Main Section / Hero Section */
+
+.first_section {
+	height: calc(100vh - 3rem);
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.first_section .profile_image {
+	--sizeOfImage: 35vw;
+	background: #000;
+	margin: 10% auto;
+	border-radius: 50%;
+	width: var(--sizeOfImage);
+	height: var(--sizeOfImage);
+	overflow: hidden;
+}
+
+.first_section .profile_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.first_section .wrapper {
+	margin-left: 10%;
+	font-family: "Reem Kufi", sans-serif;
+}
+
+.first_section .wrapper p {
+	font-size: 26px;
+}
+.first_section .wrapper p span {
+	font-size: 32px;
+	color: #427d8a;
+}
+.first_section .wrapper p:nth-child(3) span {
+	font-size: 36px;
+}
+.first_section .wrapper button {
+	padding: 10px 20px;
+	font-size: 22px;
+	background: #427d8a;
+	margin-top: 20px;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Bottom Pattern */
+
+.section_patters_float_all {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	overflow: hidden;
+	width: 100%;
+	height: 3.5rem;
+	background: #427d8a;
+}
+.section_patters_float_all:hover div,
+.section_patters_float_all:hover div:nth-child(2n + 0) {
+	animation-play-state: paused;
+}
+.section_patters_float_all div {
+	background: #ffffff;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	transform: translate(-50%, -50%);
+	animation: moveToRight 10s linear infinite;
+}
+.section_patters_float_all div:nth-child(2n + 0) {
+	animation: moveToRight2 10s linear infinite;
+}
+@keyframes moveToRight {
+	33.33% {
+		transform: translate(700%, -50%);
+	}
+	66.66% {
+		transform: translate(-700%, -30%);
+	}
+	100% {
+		transform: translateX(-50%, -50%);
+	}
+}
+@keyframes moveToRight2 {
+	33.33% {
+		transform: translate(0%, 100%);
+	}
+	66.66% {
+		transform: translate(0%, -100%);
+	}
+	100% {
+		transform: translateX(-200%, -50%);
+	}
+}
+
 /* Media Queries */
 
-@media screen and (min-width: 552px) {
+@media screen and (max-width: 401px) {
+	.first_section .wrapper button {
+		font-size: 18px;
+	}
+	.first_section {
+		align-items: center;
+	}
+	.first_section .wrapper {
+		margin-left: 0px;
+	}
+	.first_section .profile_image {
+		--sizeOfImage: 85vw;
+	}
+}
+@media screen and (min-width: 520px) {
+	.first_section .wrapper {
+		margin-left: 15%;
+	}
+}
+@media screen and (min-width: 600px) {
+	.first_section .profile_image {
+		--sizeOfImage: 220px;
+		margin-bottom: 4%;
+		margin-top: 5%;
+	}
+	.first_section .wrapper {
+		margin-left: 20%;
+	}
+}
+@media screen and (min-width: 755px) {
 	.navbar .nav_menu {
 		display: block;
 		display: flex;
@@ -96,4 +234,72 @@ li {
 	.navbar .menuToggle {
 		display: none;
 	}
+	.first_section {
+		justify-content: space-between;
+		padding: 0px 5%;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	.first_section .profile_image {
+		--sizeOfImage: 20vw;
+		margin: 0%;
+	}
+	.first_section .wrapper {
+		margin: 0%;
+	}
+}
+
+/* Defaults (Section) */
+
+section {
+	width: 100%;
+	height: 100vh;
+}
+
+.section_color {
+	--primary: #427d8a;
+	--primary-shadow: #427d8a08;
+	background: var(--primary);
+}
+
+.section_title {
+	font-size: 48px;
+	color: var(--sectionMain);
+	font-family: "Reem Kufi", sans-serif;
+}
+.section_heading {
+	width: max-content;
+	height: max-content;
+}
+.section_navigators {
+	display: flex;
+	justify-content: space-between;
+}
+.section_navigators a {
+	height: 5px;
+	width: 20%;
+	background: var(--sectionColor);
+}
+
+/* Section Two (My Work) */
+
+.second_section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.second_section .cards {
+	width: 80%;
+	margin-top: 4%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.second_section .cards .card {
+	border-radius: 10px;
+	background: #b51717;
+	margin: 2%;
+	width: 300px;
+	height: 200px;
 }
