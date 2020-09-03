@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="main.css">
     <script src="./app.js" defer></script>
 
-
-    <!-- Libraries -->
-
-    <!-- Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
+    <!-- Favico -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -31,7 +31,13 @@
         <a href="/" class="logo section_color">
             Labham
         </a>
-        <button class="menuToggle section_color" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <button class="menuToggle section_color" id="menuToggle"><svg width="17" height="10" viewBox="0 0 17 10"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="17" height="2" rx="1" fill="white" />
+                <rect y="4" width="17" height="2" rx="1" fill="white" />
+                <rect y="8" width="17" height="2" rx="1" fill="white" />
+            </svg>
+        </button>
         <ul class="nav_menu">
             <li><a href="/">Home</a></li>
             <li><a href="/work">Work</a></li>
@@ -67,7 +73,7 @@
 
     </section>
 
-    <section class="second_section sectionChangeColor" data-main="#427d8a" id="second-section"
+    <section class="second_section sectionChangeColor" data-main="#B51717" id="second-section"
         style="--sectionMain: #B51717;">
 
         <div class="section_heading">
@@ -76,9 +82,9 @@
             </p>
             <div class="section_navigators">
                 <a href="#first-section" style="--sectionColor: #427d8a;"></a>
-                <a href="#second-section" style="--sectionColor: #B51717;"></a>
-                <a href="#third-section" style="--sectionColor: #427d8a;"></a>
-                <a href="#fourth-section" style="--sectionColor: #427d8a;"></a>
+                <a href="#second-section" class="main" style="--sectionColor: #B51717;"></a>
+                <a href="#third-section" style="--sectionColor: #7900A4;"></a>
+                <a href="#fourth-section" style="--sectionColor: #267600;"></a>
             </div>
         </div>
 
@@ -95,9 +101,130 @@
     </section>
 
 
-    <section class="third_section sectionChangeColor" data-main="#427d8a" id="third-section"
-        style="--sectionMain: #B51717;">
+    <section class="third_section sectionChangeColor" data-main="#7900A4" id="third-section"
+        style="--sectionMain: #7900A4;">
 
+        <div class="section_heading">
+            <p class="section_title">
+                Tech Stack
+            </p>
+            <div class="section_navigators">
+                <a href="#first-section" style="--sectionColor: #427d8a;"></a>
+                <a href="#second-section" style="--sectionColor: #B51717;"></a>
+                <a href="#third-section" class="main" style="--sectionColor: #7900A4;"></a>
+                <a href="#fourth-section" style="--sectionColor: #267600;"></a>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="third_section-wrapper">
+
+            <div class="aboutMe">
+
+                <p class="title">About Me</p>
+
+                <div class="details">I'm Labham Jain I'm a Front End Developer i use
+
+                    <span class="techName" style="--techColor: #E34E26; --padding: 5px; --color: white;">HTML</span>
+                    <span class="techName" style="--techColor: #264DE4; --padding: 10px; --color: white;">CSS</span>
+                    <span class="techName" style="--techColor: #F7DF1E; --padding: 20px; --color: black;">JS</span>
+
+                    to create STUNNING web pages that draws user's attention which helps you to make more out of your
+                    product.
+                </div>
+
+            </div>
+
+            <div class="stacks">
+
+                <div>
+                    <img src="/images/html.svg" alt="">
+                </div>
+                <div>
+                    <img src="/images/css.svg" alt="">
+                </div>
+                <div>
+                    <img src="/images/js.svg" alt="">
+                </div>
+                <div>
+                    <img src="/images/scss.svg" alt="">
+                </div>
+                <div>
+                    <img src="/images/bootstrap.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="fourth_section sectionChangeColor" data-main="#267600" id="fourth-section"
+        style="--sectionMain: #267600;">
+
+        <div class="section_heading">
+            <p class="section_title">
+                Contact Me
+            </p>
+            <div class="section_navigators">
+                <a href="#first-section" style="--sectionColor: #427d8a;"></a>
+                <a href="#second-section" style="--sectionColor: #B51717;"></a>
+                <a href="#third-section" style="--sectionColor: #7900A4;"></a>
+                <a href="#fourth-section" class="main" style="--sectionColor: #267600;"></a>
+            </div>
+        </div>
+
+
+        <form action="/" method="post">
+
+            <div class="row">
+                <div class="input-field">
+                    <h3>Name</h3>
+                    <input type="text" autocomplete="name" name="name">
+                </div>
+                <div class="input-field">
+                    <h3>Email</h3>
+                    <input type="email" autocomplete="email" name="email">
+                </div>
+            </div>
+
+            <div class="message-field">
+                <h3>Message</h3>
+                <textarea name="message" id=""></textarea>
+            </div>
+
+            <div class="row_bottom">
+                <button class="btn_send">Send Message</button>
+                <div class="other-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=+919643122996&message=Hii" target="_blank"
+                        style="--iconBG: #25D366;">
+                        <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.9402 3.05219C16.9716 2.08181 15.8191 1.31238 14.5496 0.788458C13.28 0.26454 11.9186 -0.00344308 10.5442 3.33954e-05C4.78119 3.33954e-05 0.0896837 4.66811 0.0873543 10.4061C0.0873543 12.24 0.568385 14.0298 1.48269 15.6086L0 21L5.54292 19.5522C7.07615 20.3828 8.79389 20.8184 10.5396 20.8192H10.5442C16.3061 20.8192 20.9976 16.1511 21 10.4131C21.0039 9.04579 20.7355 7.69128 20.2104 6.42784C19.6852 5.16439 18.9136 4.01707 17.9402 3.05219ZM10.5442 19.063H10.5407C8.98411 19.0631 7.45613 18.6463 6.11713 17.8563L5.80032 17.6685L2.51114 18.5274L3.38818 15.3362L3.18202 15.0093C2.31173 13.6303 1.85102 12.0345 1.85307 10.4061C1.8554 5.6372 5.75373 1.75737 10.5477 1.75737C11.6895 1.75485 12.8203 1.97771 13.8749 2.41307C14.9295 2.84843 15.8869 3.48763 16.6916 4.29369C17.5007 5.0959 18.1419 6.04975 18.5784 7.1001C19.0148 8.15045 19.2377 9.27647 19.2342 10.4131C19.2319 15.182 15.3336 19.063 10.5442 19.063ZM15.3114 12.5842C15.0494 12.4533 13.7659 11.825 13.5259 11.738C13.2872 11.6511 13.1136 11.6082 12.9389 11.8679C12.7642 12.1275 12.2634 12.7129 12.1108 12.8868C11.9582 13.0607 11.8056 13.0815 11.5447 12.9517C11.2838 12.8219 10.4417 12.5472 9.44357 11.6615C8.6667 10.9718 8.14258 10.121 7.99 9.86014C7.83742 9.59932 7.97369 9.45906 8.10531 9.32923C8.22294 9.21331 8.36621 9.02552 8.49665 8.87367C8.6271 8.72181 8.6702 8.61401 8.75755 8.44013C8.84491 8.26625 8.80181 8.11439 8.73542 7.98456C8.6702 7.85358 8.14724 6.57383 7.92943 6.05335C7.71862 5.5491 7.50315 5.61633 7.34241 5.60938C7.17595 5.6026 7.00935 5.59951 6.84275 5.6001C6.71027 5.60346 6.57991 5.63403 6.45986 5.68988C6.3398 5.74573 6.23264 5.82567 6.14508 5.92468C5.90515 6.18549 5.23077 6.81378 5.23077 8.09353C5.23077 9.37328 6.16721 10.6101 6.29766 10.784C6.42811 10.9579 8.14025 13.5835 10.7609 14.7102C11.3852 14.978 11.872 15.138 12.2506 15.2585C12.876 15.4567 13.4456 15.4278 13.8963 15.3617C14.3983 15.2875 15.4419 14.7334 15.6597 14.126C15.8775 13.5186 15.8775 12.9981 15.8123 12.8891C15.7471 12.7802 15.5712 12.7141 15.3114 12.5842Z"
+                                fill="white" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.instagram.com/labham_codes/" style="--iconBG: #DE009C;">
+                        <svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 0C7.28333 0 6.94417 0.011875 5.8775 0.057C4.8125 0.1045 4.0875 0.263625 3.45 0.49875C2.7925 0.741 2.23417 1.06638 1.67833 1.59442C1.1225 2.12246 0.779167 2.65208 0.525 3.2775C0.2775 3.88313 0.109167 4.57188 0.06 5.58363C0.01 6.59696 0 6.91917 0 9.5C0 12.0808 0.0125 12.403 0.06 13.4164C0.11 14.4273 0.2775 15.1169 0.525 15.7225C0.776077 16.3565 1.16966 16.9309 1.67833 17.4056C2.17773 17.8892 2.78241 18.2631 3.45 18.5013C4.08833 18.7356 4.81333 18.8963 5.8775 18.943C6.94417 18.9905 7.28333 19 10 19C12.7167 19 13.0558 18.9881 14.1225 18.943C15.1867 18.8955 15.9125 18.7356 16.55 18.5013C17.2172 18.2624 17.8218 17.8886 18.3217 17.4056C18.8309 16.9313 19.2245 16.3568 19.475 15.7225C19.7217 15.1169 19.8908 14.4273 19.94 13.4164C19.99 12.403 20 12.0808 20 9.5C20 6.91917 19.9875 6.59696 19.94 5.58363C19.89 4.57267 19.7217 3.88233 19.475 3.2775C19.2238 2.64355 18.8302 2.0692 18.3217 1.59442C17.8226 1.11042 17.2178 0.7364 16.55 0.49875C15.9125 0.263625 15.1867 0.103708 14.1225 0.057C13.0558 0.0095 12.7167 0 10 0ZM10 1.71C12.6692 1.71 12.9875 1.72267 14.0417 1.76621C15.0167 1.80975 15.5458 1.96333 15.8975 2.09475C16.3658 2.26654 16.6975 2.47238 17.0492 2.80408C17.3983 3.13658 17.615 3.45246 17.7958 3.89737C17.9325 4.23146 18.0958 4.73417 18.14 5.66042C18.1875 6.66267 18.1983 6.9635 18.1983 9.5C18.1983 12.0365 18.1858 12.3381 18.1367 13.3396C18.0858 14.2658 17.9233 14.7685 17.7858 15.1026C17.6232 15.5149 17.3675 15.8883 17.0367 16.1967C16.7134 16.5112 16.3206 16.7535 15.8867 16.906C15.5367 17.0359 14.9992 17.191 14.0242 17.233C12.9625 17.2781 12.65 17.2884 9.975 17.2884C7.29917 17.2884 6.98667 17.2765 5.92583 17.2298C4.95 17.1815 4.4125 17.0272 4.0625 16.8965C3.62825 16.7439 3.23556 16.5007 2.91333 16.1848C2.57882 15.8798 2.32226 15.5061 2.16333 15.0923C2.02583 14.7598 1.86417 14.2492 1.81333 13.323C1.77583 12.3255 1.7625 12.0175 1.7625 9.48812C1.7625 6.95796 1.77583 6.64921 1.81333 5.63983C1.86417 4.71358 2.02583 4.20375 2.16333 3.87125C2.33833 3.42 2.5625 3.11125 2.91333 2.77796C3.2625 2.44625 3.58833 2.2325 4.0625 2.06704C4.4125 1.93563 4.93833 1.78125 5.91333 1.73375C6.97583 1.69813 7.28833 1.68625 9.9625 1.68625L10 1.71ZM10 4.62175C9.32566 4.62175 8.65793 4.74793 8.03492 4.99308C7.41191 5.23824 6.84584 5.59757 6.36901 6.05056C5.89218 6.50354 5.51394 7.04132 5.25588 7.63317C4.99782 8.22503 4.865 8.85938 4.865 9.5C4.865 10.1406 4.99782 10.775 5.25588 11.3668C5.51394 11.9587 5.89218 12.4965 6.36901 12.9494C6.84584 13.4024 7.41191 13.7618 8.03492 14.0069C8.65793 14.2521 9.32566 14.3783 10 14.3783C11.3619 14.3783 12.668 13.8643 13.631 12.9494C14.594 12.0346 15.135 10.7938 15.135 9.5C15.135 8.20621 14.594 6.96541 13.631 6.05056C12.668 5.13571 11.3619 4.62175 10 4.62175ZM10 12.6667C8.15833 12.6667 6.66667 11.2496 6.66667 9.5C6.66667 7.75042 8.15833 6.33333 10 6.33333C11.8417 6.33333 13.3333 7.75042 13.3333 9.5C13.3333 11.2496 11.8417 12.6667 10 12.6667ZM16.5383 4.42938C16.5268 4.72437 16.3953 5.00362 16.1715 5.20843C15.9477 5.41324 15.6491 5.52767 15.3383 5.52767C15.0276 5.52767 14.729 5.41324 14.5052 5.20843C14.2814 5.00362 14.1499 4.72437 14.1383 4.42938C14.1383 4.12703 14.2648 3.83706 14.4898 3.62327C14.7148 3.40948 15.0201 3.28938 15.3383 3.28938C15.6566 3.28938 15.9618 3.40948 16.1869 3.62327C16.4119 3.83706 16.5383 4.12703 16.5383 4.42938Z"
+                                fill="white" />
+                        </svg>
+
+                    </a>
+                    <a href="tel://+919643122996" style="--iconBG: #2B8600;">
+                        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.8025 1.58333C2.85 2.28792 2.96875 2.97667 3.15875 3.63375L2.20875 4.58375C1.88417 3.63375 1.67833 2.62833 1.60708 1.58333H2.8025ZM10.6083 11.0992C11.2812 11.2892 11.97 11.4079 12.6667 11.4554V12.635C11.6217 12.5637 10.6162 12.3579 9.65833 12.0412L10.6083 11.0992ZM3.5625 0H0.791667C0.35625 0 0 0.35625 0 0.791667C0 8.22542 6.02458 14.25 13.4583 14.25C13.8937 14.25 14.25 13.8937 14.25 13.4583V10.6954C14.25 10.26 13.8937 9.90375 13.4583 9.90375C12.4767 9.90375 11.5187 9.74542 10.6321 9.4525C10.5535 9.424 10.4702 9.41057 10.3867 9.41292C10.1808 9.41292 9.98292 9.49208 9.82458 9.6425L8.08292 11.3842C5.83888 10.2366 4.01344 8.41112 2.86583 6.16708L4.6075 4.42542C4.82917 4.20375 4.8925 3.895 4.80542 3.61792C4.5051 2.70596 4.35275 1.7518 4.35417 0.791667C4.35417 0.35625 3.99792 0 3.5625 0Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </form>
 
 
     </section>

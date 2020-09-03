@@ -52,10 +52,10 @@ const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
 	let scroll = window.scrollY;
-
 	if (scroll > 60) {
 		navbar.classList.add("scrolled");
 	} else {
 		navbar.classList.remove("scrolled");
 	}
 });
+

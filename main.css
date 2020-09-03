@@ -34,6 +34,7 @@ body {
 	position: fixed;
 	background: #ffffff;
 	height: 3rem;
+	z-index: 10;
 	align-items: center;
 	justify-content: space-between;
 	padding: 8px 10%;
@@ -54,7 +55,7 @@ body {
 .navbar .logo {
 	font-family: "Roboto", sans-serif;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 20px;
 	padding: 5px 15px;
 	color: white;
 	border-radius: 30px;
@@ -153,11 +154,9 @@ body {
 	width: 100%;
 	height: 3.5rem;
 	background: #427d8a;
+	z-index: 10;
 }
-.section_patters_float_all:hover div,
-.section_patters_float_all:hover div:nth-child(2n + 0) {
-	animation-play-state: paused;
-}
+
 .section_patters_float_all div {
 	background: #ffffff;
 	border-radius: 50%;
@@ -192,6 +191,246 @@ body {
 	}
 }
 
+/* Defaults (Section) */
+
+section {
+	width: 100%;
+	min-height: calc(100vh - 3rem);
+}
+
+.section_color {
+	--primary: #427d8a;
+	--primary-shadow: #427d8a08;
+	background: var(--primary);
+}
+
+.section_title {
+	font-size: 48px;
+	color: var(--sectionMain);
+	font-family: "Reem Kufi", sans-serif;
+}
+.section_heading {
+	width: max-content;
+	height: max-content;
+}
+.section_navigators {
+	display: flex;
+	justify-content: space-between;
+}
+.section_navigators a {
+	height: 10px;
+	border-radius: 5px;
+	width: 20%;
+	position: relative;
+	background: var(--sectionColor);
+}
+.section_navigators a.main {
+	width: 30%;
+}
+.section_navigators a.main::before {
+	pointer-events: none;
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #ffffff;
+}
+
+.second_section,
+.third_section,
+.fourth_section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 3.5rem;
+}
+/* Section Two (My Work) */
+
+.second_section .cards {
+	width: 80%;
+	margin-top: 4%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.second_section .cards .card {
+	border-radius: 10px;
+	background: #b51717;
+	margin: 2%;
+	width: 300px;
+	height: 200px;
+}
+
+/* Section Third (Tech Stack) */
+
+.third_section {
+	position: relative;
+}
+
+.third_section .third_section-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 0% 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Reem Kufi", sans-serif;
+}
+
+.third_section .third_section-wrapper .aboutMe {
+	width: 70%;
+	margin-top: 15%;
+}
+.third_section .third_section-wrapper .aboutMe .title {
+	color: #e34e26;
+	position: relative;
+	font-size: 32px;
+	margin-bottom: 30px;
+	width: fit-content;
+}
+.third_section .third_section-wrapper .aboutMe .title::before {
+	position: absolute;
+	content: "";
+	bottom: -3px;
+	left: 0px;
+	border-radius: 2px;
+	width: 50%;
+	height: 3px;
+	background: #e34e26;
+}
+.third_section .third_section-wrapper .aboutMe .details {
+	font-size: 22px;
+}
+.third_section .third_section-wrapper .stacks {
+	display: grid;
+	width: 30%;
+	justify-content: center;
+	grid-template-columns: 100px 100px;
+	margin-top: 10%;
+	grid-auto-rows: 100px;
+	gap: 20px;
+}
+.third_section .third_section-wrapper .stacks div {
+	width: 100px;
+	display: flex;
+	height: 100px;
+	box-shadow: 4px 4px 30px #00000010, -5px -4px 26px #ffffff25;
+	align-items: center;
+	justify-content: center;
+}
+.third_section .third_section-wrapper .stacks div img {
+	width: 70px;
+	height: 70px;
+}
+.third_section .third_section-wrapper .aboutMe .details .techName {
+	background: var(--techColor);
+	border-radius: 3px;
+	padding: 3px var(--padding);
+	color: var(--color);
+	width: fit-content;
+
+	font-size: 16px;
+	font-weight: 100;
+}
+
+/* Fourth Section (contact me) */
+
+.fourth_section form {
+	width: 60%;
+	margin: 0px auto;
+	margin-top: 3.5rem;
+}
+.fourth_section form .row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.fourth_section form .message-field {
+	width: 100%;
+}
+.fourth_section form .row .input-field {
+	width: 100%;
+	margin: 10px 0px;
+}
+
+.fourth_section form .message-field textarea,
+.fourth_section form .row .input-field input {
+	width: 100%;
+	border-radius: 5px;
+	border: 3px solid var(--sectionMain);
+
+	font-family: "Roboto", sans-serif;
+	outline: none;
+	font-size: 18px;
+}
+
+.fourth_section form .message-field h3,
+.fourth_section form .row .input-field h3 {
+	font-family: "Reem Kufi", sans-serif;
+	color: var(--sectionMain);
+}
+
+.fourth_section form .message-field {
+}
+.fourth_section form .message-field textarea {
+	resize: none;
+	padding: 10px 15px;
+	padding-right: 40px;
+	height: 200px;
+	line-height: 1.8rem;
+}
+.fourth_section form .row .input-field input {
+	padding: 5px 10px;
+}
+.fourth_section form .row .input-field input[name="name"] {
+	text-transform: capitalize;
+}
+
+.fourth_section form .row_bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.fourth_section form .row_bottom .btn_send {
+	width: 60%;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+	background: var(--sectionMain);
+	border: none;
+	color: white;
+	font-family: "Reem Kufi", sans-serif;
+	font-size: 18px;
+	padding: 5px 0px;
+}
+.fourth_section form .row_bottom .other-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 35%;
+}
+
+.fourth_section form .row_bottom .other-buttons a {
+	background: var(--iconBG);
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+.fourth_section form .row_bottom .other-buttons a i,
+.fourth_section form .row_bottom .other-buttons a svg {
+	width: 20px;
+}
 /* Media Queries */
 
 @media screen and (max-width: 401px) {
@@ -222,6 +461,12 @@ body {
 	.first_section .wrapper {
 		margin-left: 20%;
 	}
+	.second_section .cards {
+		width: 95%;
+	}
+	.second_section .cards .card {
+		width: 40%;
+	}
 }
 @media screen and (min-width: 755px) {
 	.navbar .nav_menu {
@@ -247,59 +492,21 @@ body {
 	.first_section .wrapper {
 		margin: 0%;
 	}
-}
 
-/* Defaults (Section) */
-
-section {
-	width: 100%;
-	height: 100vh;
+	.second_section .cards .card {
+		width: 40%;
+		max-width: 300px;
+	}
 }
-
-.section_color {
-	--primary: #427d8a;
-	--primary-shadow: #427d8a08;
-	background: var(--primary);
-}
-
-.section_title {
-	font-size: 48px;
-	color: var(--sectionMain);
-	font-family: "Reem Kufi", sans-serif;
-}
-.section_heading {
-	width: max-content;
-	height: max-content;
-}
-.section_navigators {
-	display: flex;
-	justify-content: space-between;
-}
-.section_navigators a {
-	height: 5px;
-	width: 20%;
-	background: var(--sectionColor);
-}
-
-/* Section Two (My Work) */
-
-.second_section {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.second_section .cards {
-	width: 80%;
-	margin-top: 4%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.second_section .cards .card {
-	border-radius: 10px;
-	background: #b51717;
-	margin: 2%;
-	width: 300px;
-	height: 200px;
+@media screen and (max-width: 1047px) {
+	.fourth_section form .row_bottom {
+		flex-direction: column;
+	}
+	.fourth_section form .row_bottom .btn_send {
+		width: 100%;
+	}
+	.fourth_section form .row_bottom .other-buttons {
+		width: 60%;
+		margin-top: 1rem;
+	}
 }
