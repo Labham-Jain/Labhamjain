@@ -80,6 +80,7 @@ body {
 	top: 3rem;
 	font-family: "Reem Kufi", sans-serif;
 	width: 100%;
+	z-index: 15;
 	text-align: center;
 	height: calc(100vh - 3rem);
 	background: #ffffff;
@@ -95,47 +96,50 @@ body {
 /* Main Section / Hero Section */
 
 .first_section {
-	height: calc(100vh - 3rem);
 	padding-top: 3rem;
+	padding-bottom: 3rem;
 	display: flex;
 	flex-direction: column;
 }
 
 .first_section .profile_image {
-	--sizeOfImage: 35vw;
+	--sizeOfImage: 250px;
 	background: #000;
 	margin: 10% auto;
-	border-radius: 50%;
 	width: var(--sizeOfImage);
 	height: var(--sizeOfImage);
-	overflow: hidden;
 }
 
 .first_section .profile_image img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .first_section .wrapper {
-	margin-left: 10%;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-family: "Reem Kufi", sans-serif;
 }
 
-.first_section .wrapper p {
+.first_section .wrapper .text p {
 	font-size: 26px;
 }
-.first_section .wrapper p span {
+.first_section .wrapper .text p span {
 	font-size: 32px;
 	color: #427d8a;
 }
-.first_section .wrapper p:nth-child(3) span {
+.first_section .wrapper .text p:nth-child(3) span {
 	font-size: 36px;
 }
 .first_section .wrapper button {
 	padding: 10px 20px;
-	font-size: 22px;
+	font-size: 16px;
 	background: #427d8a;
+
 	margin-top: 20px;
 	color: #ffffff;
 	border: none;
@@ -195,7 +199,6 @@ body {
 
 section {
 	width: 100%;
-	min-height: calc(100vh - 3rem);
 }
 
 .section_color {
@@ -283,7 +286,7 @@ section {
 }
 
 .third_section .third_section-wrapper .aboutMe {
-	width: 70%;
+	width: 103%;
 	margin-top: 15%;
 }
 .third_section .third_section-wrapper .aboutMe .title {
@@ -304,7 +307,8 @@ section {
 	background: #e34e26;
 }
 .third_section .third_section-wrapper .aboutMe .details {
-	font-size: 22px;
+	font-size: 16px;
+	line-height: 2rem;
 }
 .third_section .third_section-wrapper .stacks {
 	display: grid;
@@ -333,8 +337,7 @@ section {
 	padding: 3px var(--padding);
 	color: var(--color);
 	width: fit-content;
-
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 100;
 }
 
@@ -399,7 +402,6 @@ section {
 }
 
 .fourth_section form .row_bottom .btn_send {
-	width: 60%;
 	border-radius: 100px;
 	outline: none;
 	cursor: pointer;
@@ -414,7 +416,8 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 35%;
+	width: 100%;
+	margin-top: 1rem;
 }
 
 .fourth_section form .row_bottom .other-buttons a {
@@ -435,7 +438,7 @@ section {
 
 @media screen and (max-width: 401px) {
 	.first_section .wrapper button {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.first_section {
 		align-items: center;
@@ -443,24 +446,54 @@ section {
 	.first_section .wrapper {
 		margin-left: 0px;
 	}
-	.first_section .profile_image {
-		--sizeOfImage: 85vw;
+	.first_section .wrapper .text p {
+		font-size: 18px;
+	}
+	.first_section .wrapper .text p span {
+		font-size: 28px;
+	}
+	.first_section .wrapper .text p:nth-child(3) span {
+		font-size: 30px;
 	}
 }
+
+@media screen and (min-width: 402px) {
+	.first_section .wrapper {
+		display: block;
+		margin-left: 10%;
+	}
+	.third_section .third_section-wrapper .aboutMe {
+		width: 82%;
+	}
+	.third_section .third_section-wrapper .aboutMe .details {
+		font-size: 22px;
+	}
+	.third_section .third_section-wrapper .aboutMe .details span {
+		font-size: 16px;
+	}
+
+	.fourth_section form .row_bottom .other-buttons {
+		justify-content: space-around;
+	}
+}
+
 @media screen and (min-width: 520px) {
 	.first_section .wrapper {
 		margin-left: 15%;
 	}
+	.first_section .profile_image {
+		--sizeOfImage: 220px;
+	}
+	.fourth_section form .row_bottom .other-buttons {
+		width: 60%;
+	}
 }
 @media screen and (min-width: 600px) {
 	.first_section .profile_image {
-		--sizeOfImage: 220px;
 		margin-bottom: 4%;
 		margin-top: 5%;
 	}
-	.first_section .wrapper {
-		margin-left: 20%;
-	}
+
 	.second_section .cards {
 		width: 95%;
 	}
@@ -482,6 +515,7 @@ section {
 	.first_section {
 		justify-content: space-between;
 		padding: 0px 5%;
+		height: 100vh;
 		align-items: center;
 		flex-direction: row-reverse;
 	}
@@ -497,6 +531,16 @@ section {
 		width: 40%;
 		max-width: 300px;
 	}
+	.third_section .third_section-wrapper {
+		flex-direction: row;
+	}
+	.third_section .third_section-wrapper .aboutMe {
+		width: 49%;
+		margin-top: 0%;
+	}
+	.third_section .third_section-wrapper .stacks {
+		margin-top: 5%;
+	}
 }
 @media screen and (max-width: 1047px) {
 	.fourth_section form .row_bottom {
@@ -505,8 +549,12 @@ section {
 	.fourth_section form .row_bottom .btn_send {
 		width: 100%;
 	}
+}
+@media screen and (min-width: 1048px) {
 	.fourth_section form .row_bottom .other-buttons {
-		width: 60%;
-		margin-top: 1rem;
+		margin: 0px;
+	}
+	.fourth_section form .row_bottom .btn_send {
+		width: 100%;
 	}
 }
