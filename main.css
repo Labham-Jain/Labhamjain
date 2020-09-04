@@ -104,7 +104,7 @@ body {
 
 .first_section .profile_image {
 	--sizeOfImage: 250px;
-	background: #000;
+	background: none;
 	margin: 10% auto;
 	width: var(--sizeOfImage);
 	height: var(--sizeOfImage);
